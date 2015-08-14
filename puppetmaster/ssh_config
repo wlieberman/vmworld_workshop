@@ -1,0 +1,3 @@
+Host git.puppet.vm
+	Hostname git.puppet.vm
+	StrictHostKeyChecking no
