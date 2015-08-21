@@ -6,11 +6,11 @@
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
 Vagrant.configure(2) do |config|
-  config.vm.define "git" do |puppet|
-    puppet.vm.box = "puppetlabs/centos-6.6-64-nocm"
-    puppet.vm.hostname = "git"
-    puppet.vm.provision :shell, path: "git/bootstrap.sh"
-    puppet.vm.network :private_network, ip: "172.16.130.11"
+  config.vm.define "git" do |git|
+    git.vm.box = "puppetlabs/centos-6.6-64-nocm"
+    git.vm.hostname = "git"
+    git.vm.provision :shell, path: "git/bootstrap.sh"
+    git.vm.network :private_network, ip: "172.16.130.11"
   end
   config.vm.define "puppet-master" do |puppet|
     puppet.vm.box = "puppetlabs/centos-6.6-64-nocm"
