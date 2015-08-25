@@ -1,0 +1,4 @@
+127.0.0.1   puppet-agent localhost localhost.localdomain localhost4 localhost4.localdomain4 puppet-agent.puppet.vm
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+172.16.130.11 git git.puppet.vm
+172.16.130.10 puppet-master  puppet-master.puppet.vm
