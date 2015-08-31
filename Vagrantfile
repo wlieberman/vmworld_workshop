@@ -22,6 +22,10 @@ Vagrant.configure(2) do |config|
       v.vmx["memsize"] = "4096"
       v.vmx["numvcpus"] = "2"
     end
+    puppet.vm.provider "virtualbox" do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "4096"]
+      vb.customize ["modifyvm", :id, "--cpus", "2"]
+    end
   end
   config.vm.define "puppet-agent" do |puppetagent|
     puppetagent.vm.box = "puppetlabs/centos-6.6-64-nocm"
@@ -30,6 +34,10 @@ Vagrant.configure(2) do |config|
     puppetagent.vm.provider "vmware_fusion" do |v|
       v.vmx["memsize"] = "1024"
       v.vmx["numvcpus"] = "1"
+    end
+    puppet.vm.provider "virtualbox" do |vb|
+      vb.customize ["modifyvm", :id, "--memory", "1024"]
+      vb.customize ["modifyvm", :id, "--cpus", "1"]
     end
   end
 end
