@@ -1,7 +1,8 @@
 Puppet Workshop
 ---------------
 Please feel free to contact me if you have any questions about this workshop.
-Billy Lieberman: (<wlieberman@vmware.com>)
+
+Billy Lieberman: <wlieberman@vmware.com>
 
 This is a vagrant repo which contains several virtual machines for doing
 Puppet development and testing.
