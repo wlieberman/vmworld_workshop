@@ -35,7 +35,7 @@ Vagrant.configure(2) do |config|
       v.vmx["memsize"] = "1024"
       v.vmx["numvcpus"] = "1"
     end
-    puppet.vm.provider "virtualbox" do |vb|
+    puppetagent.vm.provider "virtualbox" do |vb|
       vb.customize ["modifyvm", :id, "--memory", "1024"]
       vb.customize ["modifyvm", :id, "--cpus", "1"]
     end
